@@ -1,0 +1,15 @@
+# THESIS INFO REGISTRATION SYSTEM
+#### Video Demo: <https://youtu.be/K-lWvnIP8BA>
+#### Description:
+This program aims to manage information about projects and theses in an educational institution. It allows students to register, and administrators (in this case, only one with ID 1234) to update information in the main file, assign directors, and set deadlines.
+
+The program uses several libraries, such as "os", "validate_email", "shutil", "csv", "pandas", "re", and "datetime". Additionally, it contains several functions that perform different tasks, such as "verify_core_file", "add_core_file", "initialize_user", "admin_action", "student_action", "register_title_thesis", "view_student_information", "view_dates_thesis", "quit_program", "update_core_file", "set_limit_date", "get_general_file", "select_index", "assign_director", "output_window", "select_date", "save_general_file", "write_date", "set_date", and "create_general_file". The program doesn't use any relational database.
+
+Regarding its structure, the program starts by defining the administrator's ID and then moves on to the main function "main". This function checks if there is a main file and, if not, adds one. Then, it initializes the user (administrator or student) and displays the corresponding welcome message. Depending on the user, different options are shown, which are handled through the "admin_action" and "student_action" functions. The administrator options allow updating the main file, setting deadlines, and assigning directors. The student options allow registering their thesis title, viewing their personal information, and seeing the established deadlines.
+
+The "update_core_file" function copies the selected file and saves it as the new main file. The "set_limit_date" function checks if directors have been assigned before setting a deadline. The "get_general_file" function gets information from the general file (information about projects and theses), while the "select_index" function allows the user to select a row in the table to operate on. The "assign_director" function assigns a director to a specific row in the general file. The "output_window" function shows the information of a selected row in the table. The "select_date" function allows the user to select a date and checks if it is a valid date. The "save_general_file" function saves the changes made to the general file. The "write_date" function sets the selected date in the corresponding event type. The "set_date" function prompts the user for the event type and corresponding date to set the deadline.
+Finally, the "create_general_file" function creates a general file from the main file.
+
+This is a formative excercise elaborated as part of my participation in CS50 - Python course.
+ChatGPT was helpful in translating some ideas from Spanish. It also generated the above program description and answered questions about modules use and pytest test generation.
+Thank you David Marlan, CS50 Team and Harvard University.
